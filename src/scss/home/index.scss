@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  // outline: 1px solid red;
 }
 
 html,
@@ -561,43 +560,70 @@ div.container.three {
     }
 
     > div.top {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: 100%;
 
+      @media (min-width: 375px) and (max-width: 599px) {
+        width: 366px;
+        height: 226.21px;
+      }
+      @media (min-width: 600px) and (max-width: 899px) {
+        width: 414px;
+        height: 226.21px;
+      }
+      @media (min-width: 900px) and (max-width: 1199px) {
+        width: 600px;
+        height: 226.21px;
+      }
+      @media (min-width: 1200px) and (max-width: 1535px) {
+        width: 439.5px;
+        height: 440px;
+        grid-area: pic;
+        margin-right: 21px;
+      }
+      @media (min-width: 1536px) and (max-width: 1919px) {
+        width: 590px;
+        height: 440px;
+        grid-area: pic;
+        margin-right: 122px;
+      }
+      @media (min-width: 1920px) and (max-width: 2560px) {
+        width: 758px;
+        height: 758px;
+        grid-area: pic;
+        margin-right: 150px;
+      }
       > picture {
         display: flex;
-        align-items: center;
-        justify-content: center;
         width: 100%;
-      }
+        height: 100%;
+        
+        > img {
+          display: block;
+          flex: 1;
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 5px;
 
-      > picture img {
-        width: 100%;
-        max-width: 100%;
-        object-fit: cover;
-        border-radius: 5px;
+          @media (min-width: 600px) and (max-width: 899px) {
+            border-radius: 13px;
+          }
 
-        @media (min-width: 900px) {
-          width: 600px;
-          height: 226.21px;
-          border-radius: 13px;
-        }
+          @media (min-width: 900px) and (max-width: 1199px) {
+            border-radius: 13px;
+          }
 
-        @media (min-width: 1200px) {
-          width: 439.5px;
-          height: 440px;
-          grid-area: pic;
-          margin-right: 122px;
-        }
+          @media (min-width: 1200px) and (max-width: 1535px) {
+            margin-right: 122px;
+          }
 
-        @media (min-width: 1920px) {
-          width: 758px;
-          height: 758px;
-          grid-area: pic;
-          margin-right: 122px;
+          @media (min-width: 1536px) and (max-width: 1919px) {
+            margin-right: 122px;
+          }
+
+          @media (min-width: 1920px) and (max-width: 2560px) {
+            margin-right: 122px;
+          }
         }
       }
     }
@@ -1042,10 +1068,8 @@ div.container.five {
         text-align: center;
         border-radius: 5px;
         background-color: white;
-        filter: drop-shadow(0 0 2.75px rgba(0, 51, 85, 0.0217))
-          drop-shadow(0 0 6.95px rgba(0, 51, 85, 0.0311))
-          drop-shadow(0 0 14.18px rgba(0, 51, 85, 0.0389))
-          drop-shadow(0 0 29.2px rgba(0, 51, 85, 0.0483));
+        filter: drop-shadow(0 0 2.75px rgba(0, 51, 85, 0.0217)) drop-shadow(0 0 6.95px rgba(0, 51, 85, 0.0311))
+          drop-shadow(0 0 14.18px rgba(0, 51, 85, 0.0389)) drop-shadow(0 0 29.2px rgba(0, 51, 85, 0.0483));
         padding: 13px;
 
         @media (min-width: 1920px) {
@@ -1274,7 +1298,7 @@ div.container.seven {
         border-radius: 5px;
         cursor: pointer;
 
-        @media(min-width:600px) {
+        @media (min-width: 600px) {
           width: 414px;
           height: 405.87px;
         }
@@ -1629,6 +1653,10 @@ div.container.nine {
           margin-bottom: 33px;
           width: 100%;
           max-width: 100%;
+
+          @media (min-width: 1536px) {
+            margin: 70px 0 70px 0;
+          }
 
           @media (min-width: 1920px) {
             margin: 77.5px 0 77.5px 0;
