@@ -86,7 +86,8 @@ section.container.one > div.wrapper > .middle > button {
   border: 1px solid #297da9;
   border-radius: 5px;
 }
-section.container.one > div.wrapper > .middle > button::before, section.container.one > div.wrapper > .middle > button::after {
+section.container.one > div.wrapper > .middle > button::before,
+section.container.one > div.wrapper > .middle > button::after {
   content: "";
   position: absolute; /*cAmbiar, esta mal*/
   top: 50%;
@@ -174,7 +175,8 @@ section.container.two > div.wrapper > .middle > button {
   border: 1px solid #297da9;
   border-radius: 5px;
 }
-section.container.two > div.wrapper > .middle > button::before, section.container.two > div.wrapper > .middle > button::after {
+section.container.two > div.wrapper > .middle > button::before,
+section.container.two > div.wrapper > .middle > button::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -197,4 +199,4 @@ section.container.two > div.wrapper > .bottom > .mosaicContainer {
   grid-template-rows: repeat(3, auto);
   grid-template-columns: repeat(2, auto);
   gap: 21px;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
