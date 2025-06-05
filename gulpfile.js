@@ -36,12 +36,19 @@ function processJs() {
     .pipe(browserSync.stream());
 }
 
-// Optimizar imágenes (versión actualizada para gulp-imagemin@8+)
+// Optimizar imágenes comunes
 function optimizeImages() {
-    return gulp.src('src/images/**/*.{jpg,png,gif,svg}')
-      .pipe(imagemin())  // Sin argumentos
-      .pipe(gulp.dest('dist/images'))
-      .pipe(browserSync.stream());
+  return gulp.src('src/images/**/*.{jpg,png,gif,svg}')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/images'))
+    .pipe(browserSync.stream());
+}
+
+// Copiar otros assets como .webp, .ico, .mp4, .webm, etc.
+function copyAssets() {
+  return gulp.src('src/assets/**/*')
+    .pipe(gulp.dest('dist/assets'))
+    .pipe(browserSync.stream());
 }
 
 // Procesar HTML
@@ -61,12 +68,13 @@ function serve() {
   gulp.watch('src/scss/**/*.scss', compileSass);
   gulp.watch('src/js/**/*.js', processJs);
   gulp.watch('src/images/**/*.{jpg,png,gif,svg}', optimizeImages);
+  gulp.watch('src/assets/**/*', copyAssets);
   gulp.watch('src/html/**/*.html', processHtml);
 }
 
-// Tareas
+// Tareas principales
 const build = gulp.series(
-  gulp.parallel(compileSass, processJs, optimizeImages, processHtml)
+  gulp.parallel(compileSass, processJs, optimizeImages, copyAssets, processHtml)
 );
 
 const dev = gulp.series(build, serve);
