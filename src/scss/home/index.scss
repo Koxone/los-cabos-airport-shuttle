@@ -121,20 +121,75 @@ div.container.one {
     > div.bottom {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       width: 100%;
+      gap: 21px;
 
+      @media (min-width: 320px) and (max-width: 413px) {
+        // gap: 0px;
+      }
+
+      @media (min-width: 900px) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
       @media (min-width: 1200px) {
         flex-wrap: nowrap;
         justify-content: space-between;
       }
 
       > picture img {
-        width: 150px;
-
-        @media (min-width: 1200px) {
+        @media (min-width: 320px) and (max-width: 374px) {
+          width: 125px;
+          height: 125px;
+        }
+        @media (min-width: 375px) and (max-width: 424px) {
+          width: 152.5px;
+          height: 152.5px;
+        }
+        @media (min-width: 600px) and (max-width: 749px) {
+          width: 196.5px;
+          height: 196.5px;
+        }
+        @media (min-width: 750px) and (max-width: 899px) {
+          width: 270.5px;
+          height: 270.5px;
+        }
+        @media (min-width: 1200px) and (max-width: 2565px) {
           width: 163.2px;
+          height: 163.2px;
+        }
+      }
+
+      > picture:nth-of-type(1) img {
+        @media (min-width: 900px) and (max-width: 1199px) {
+          width: 186px;
+          height: 186px;
+        }
+      }
+      > picture:nth-of-type(2) img {
+        @media (min-width: 900px) and (max-width: 1199px) {
+          width: 186px;
+          height: 186px;
+        }
+      }
+      > picture:nth-of-type(3) img {
+        @media (min-width: 900px) and (max-width: 1199px) {
+          width: 186px;
+          height: 186px;
+        }
+      }
+      > picture:nth-of-type(4) img {
+        @media (min-width: 900px) and (max-width: 1199px) {
+          width: 289.5px;
+          height: 289.5px;
+        }
+      }
+      > picture:nth-of-type(5) img {
+        @media (min-width: 900px) and (max-width: 1199px) {
+          width: 289.5px;
+          height: 289.5px;
         }
       }
     }
@@ -353,19 +408,6 @@ div.container.three {
     }
 
     > div.top {
-      @media (min-width: 375px) and (max-width: 599px) {
-        width: 366px;
-        height: 226.2096px;
-      }
-      @media (min-width: 600px) and (max-width: 899px) {
-        width: 414px;
-        height: 226.2096px;
-      }
-      @media (min-width: 900px) and (max-width: 1199px) {
-        width: 600px;
-        height: 226.2096px;
-      }
-
       > picture {
         display: flex;
         width: 100%;
@@ -374,22 +416,27 @@ div.container.three {
         > img {
           display: block;
           flex: 1;
-          width: 100%;
-          height: 100%;
+          width: 366px;
+          height: 226.21px;
           object-fit: cover;
           object-position: center;
           border-radius: 5px;
 
           @media (min-width: 600px) and (max-width: 899px) {
             border-radius: 13px;
+            width: 414px;
+            height: 226.21px;
           }
 
           @media (min-width: 900px) and (max-width: 1199px) {
             border-radius: 13px;
+            width: 600px;
+            height: 226.21px;
           }
 
           @media (min-width: 1200px) and (max-width: 2565px) {
             width: 439.5px;
+            height: 440px;
           }
         }
       }
@@ -478,6 +525,7 @@ div.container.four {
     padding: 34px 0 34px 0;
   }
   > div.wrapper {
+    gap: 21px;
     @media (min-width: 900px) {
       gap: 21px;
     }
@@ -505,29 +553,31 @@ div.container.four {
       justify-content: center;
       grid-template-columns: repeat(2, 1fr);
       gap: 21px;
-      max-width: 100%;
+      width: 100%;
 
       @media (min-width: 900px) and (max-width: 1199px) {
         display: flex;
         flex-wrap: wrap;
+        gap: 0;
+        justify-content: space-between;
 
-        > span.types:nth-of-type(1) {
+        > div.types:nth-of-type(1) {
           width: 186px;
           height: 430.9504px;
         }
-        > span.types:nth-of-type(2) {
+        > div.types:nth-of-type(2) {
           width: 186px;
           height: 430.9504px;
         }
-        > span.types:nth-of-type(3) {
+        > div.types:nth-of-type(3) {
           width: 186px;
           height: 430.9504px;
         }
-        > span.types:nth-of-type(4) {
+        > div.types:nth-of-type(4) {
           width: 289.5008px;
           height: 598.4096px;
         }
-        > span.types:nth-of-type(5) {
+        > div.types:nth-of-type(5) {
           width: 289.5008px;
           height: 598.4096px;
         }
@@ -536,29 +586,29 @@ div.container.four {
       @media (min-width: 1200px) {
         display: flex;
 
-        > span.types:nth-of-type(1) {
+        > div.types:nth-of-type(1) {
           width: 162.2px;
           height: 394.0608px;
         }
-        > span.types:nth-of-type(2) {
+        > div.types:nth-of-type(2) {
           width: 162.2px;
           height: 394.0608px;
         }
-        > span.types:nth-of-type(3) {
+        > div.types:nth-of-type(3) {
           width: 162.2px;
           height: 394.0608px;
         }
-        > span.types:nth-of-type(4) {
+        > div.types:nth-of-type(4) {
           width: 162.2px;
           height: 394.0608px;
         }
-        > span.types:nth-of-type(5) {
+        > div.types:nth-of-type(5) {
           width: 162.2px;
           height: 394.0608px;
         }
       }
 
-      > span.types {
+      > div.types {
         width: 100%;
         max-width: 100%;
 
